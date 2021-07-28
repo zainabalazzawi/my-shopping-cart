@@ -1,13 +1,18 @@
+:root {
+  --black: #1c0000;
+  --bg: #faf8f3;
+}
+
 .main-container {
   height: 100vh;
   padding: 10px;
-  background: #1c0000;
+  background: var(--black);
   display: grid;
   grid-template-columns: 3fr 1fr;
 }
 
 .content-container {
-  background: #faf8f3;
+  background: var(--bg);
   padding: 10px;
   border-radius: 25px;
   overflow: hidden;
