@@ -188,16 +188,16 @@ const productsList = [
   },
 ];
 
-const Products = (id) => {
+const Products = (productsList) => {
   return (
     <div className="products">
-      {productsList.map((id) => (
-        <div className="product" key={id}>
-          <img className="img" src={id.image} alt={id.title} />;
-          <h1 className="price">{id.price}</h1>
-          <p className="title">{id.title}</p>
-          <span className="category">{id.category}</span>
-          {/*<p className="description">{id.description}</p>;*/}
+      {productsList.map((product) => (
+        <div className="product" key={product}>
+          <img className="img" src={product.image} alt={product.title} />;
+          <h1 className="price">{product.price}</h1>
+          <p className="title">{product.title}</p>
+          <span className="category">{product.category}</span>
+          {/*<p className="description">{product.description}</p>;*/}
         </div>
       ))}
     </div>

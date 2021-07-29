@@ -1,12 +1,11 @@
 import "./App.css";
 //import Products from "./components/products";
-
 function App() {
   return (
     <div className="main-container">
       <div className="content-container">
         <div className="header">Fancy products</div>
-        <span>(29)</span>
+        <h1 className="number">(29)</h1>
       </div>
       {/*<Products />*/}
 

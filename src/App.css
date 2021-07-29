@@ -1,5 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600&display=swap");
-
+@import url("https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
 :root {
   --black: #1c0000;
   --bg: #faf8f3;
@@ -29,12 +28,10 @@
 }
 
 .header {
-  position: absolute;
   width: 211px;
   height: 35px;
   left: 45px;
   top: 55px;
-  font-family: "Raleway", sans-serif;
   font-style: normal;
   font-weight: 300;
   font-size: 30px;
@@ -43,13 +40,12 @@
   align-items: center;
   color: var(--black);
 }
-span {
+.number {
   position: absolute;
   width: 49px;
   height: 35px;
   left: 268px;
   top: 55px;
-  font-family: "Raleway", sans-serif;
   font-style: normal;
   font-weight: 300;
   font-size: 30px;
@@ -93,7 +89,6 @@ span {
   right: 11.07%;
   top: 64.28%;
   bottom: 23.81%;
-  font-family: Raleway;
   font-style: normal;
   font-weight: bold;
   font-size: 30px;
@@ -109,7 +104,6 @@ title {
   right: 4.29%;
   top: 77.69%;
   bottom: 12.56%;
-  font-family: Raleway;
   font-style: normal;
   font-weight: 500;
   font-size: 12px;
@@ -124,7 +118,6 @@ title {
   right: 4.29%;
   top: 87.44%;
   bottom: 2.82%;
-  font-family: Raleway;
   font-style: normal;
   font-weight: normal;
   font-size: 12px;
