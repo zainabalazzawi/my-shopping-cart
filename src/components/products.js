@@ -1,12 +1,7 @@
-import { useEffect, useState } from "react";
+import React from "react";
+import "../css/products.css";
 
-const Products = () => {
-  const [products, setProducts] = useState([]);
-  useEffect(() => {
-    fetch("https://fakestoreapi.com/products")
-      .then((res) => res.json())
-      .then((data) => setProducts(data));
-  }, []);
+const Products = ({ products }) => {
   return (
     <div className="products">
       {products.map((product) => (

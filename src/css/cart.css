@@ -1,0 +1,133 @@
+.my-cart-container {
+  position: absolute;
+  width: 270px;
+  height: 505px;
+  left: 1168px;
+  top: 63px;
+}
+
+.cart-word {
+  position: absolute;
+  width: 77px;
+  height: 25px;
+  left: 80px;
+  top: -5px;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 21px;
+  line-height: 25px;
+  /* identical to box height */
+  display: flex;
+  align-items: center;
+  text-align: center;
+  color: var(--white);
+}
+
+.circle {
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  border-radius: 50px;
+  left: 100px;
+  top: 60px;
+  background: var(--accent);
+}
+
+.amount {
+  position: absolute;
+  height: 25px;
+  left: 13px;
+  top: 7px;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 21px;
+  line-height: 25px;
+  /* identical to box height */
+  display: flex;
+  align-items: center;
+  color: var(--black);
+}
+
+.no-products {
+  position: absolute;
+  width: 195px;
+  height: 42px;
+  left: 30px;
+  top: 170px;
+  font-style: normal;
+  font-weight: 300;
+  font-size: 18px;
+  line-height: 21px;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  opacity: 0.5;
+  color: var(--white);
+}
+
+.line {
+  position: absolute;
+  width: 245px;
+  height: 0px;
+  top: 350px;
+  background: var(--white);
+  opacity: 0.5;
+  border-bottom: 0.5px solid var(--white);
+  transform: rotate(180deg);
+}
+
+.total {
+  position: absolute;
+  width: 34px;
+  height: 16px;
+  top: 365px;
+  left: 16px;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 16px;
+  display: flex;
+  align-items: center;
+  color: var(--white);
+  opacity: 0.5;
+}
+
+.price {
+  position: absolute;
+  left: 65.06%;
+  right: 0.14%;
+  top: 73.11%;
+  bottom: 48.33%;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 20px;
+  line-height: 23px;
+  display: flex;
+  align-items: center;
+  color: var(--white);
+}
+.pay-btn {
+  position: absolute;
+  bottom: 36.89%;
+  width: 236px;
+  height: 40px;
+  top: 470px;
+  left: 12px;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 21px;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+  color: var(--black);
+  background: var(--bg);
+  box-shadow: 0px 4px 15px -5px rgba(0, 0, 0, 0.25);
+  border-radius: 15px;
+  border: none;
+}
+
+.pay-btn {
+  opacity: 0.5;
+}
