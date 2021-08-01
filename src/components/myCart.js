@@ -1,7 +1,7 @@
 import React from "react";
 import "../css/cart.css";
 
-const Mycart = () => {
+const MyCart = () => {
   return (
     <div className="my-cart-container">
       <h1 className="cart-word">My Cart</h1>
@@ -19,4 +19,4 @@ const Mycart = () => {
   );
 };
 
-export default Mycart;
+export default MyCart;
