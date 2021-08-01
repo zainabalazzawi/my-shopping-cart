@@ -14,3 +14,21 @@
   display: grid;
   grid-template-columns: 3fr 1fr;
 }
+.content-container {
+  background: var(--bg);
+  display: grid;
+  padding: 35px;
+  border-radius: 25px;
+  overflow: hidden;
+  overflow-y: auto;
+}
+
+.container-title {
+  font-style: normal;
+  font-weight: 300;
+  font-size: 30px;
+}
+
+.container-list-total {
+  opacity: 0.3;
+}

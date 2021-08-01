@@ -1,7 +1,6 @@
 import React from "react";
-import "../css/cart.css";
-
-const Mycart = () => {
+import "./MyCart.css";
+const MyCart = () => {
   return (
     <div className="my-cart-container">
       <h1 className="cart-word">My Cart</h1>
@@ -12,11 +11,11 @@ const Mycart = () => {
         No products added yet, add items to continue.
       </p>
       <div className="line"></div>
-      <p className="total">Total</p>
-      <p className="price">$00.00</p>
+      <div className="total">Total</div>
+      <div className="total-price">$00.00</div>
       <button className="pay-btn">Pay</button>
     </div>
   );
 };
 
-export default Mycart;
+export default MyCart;

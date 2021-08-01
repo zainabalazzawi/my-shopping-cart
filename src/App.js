@@ -1,8 +1,8 @@
 import { useEffect, useState } from "react";
-import Mycart from "./components/myCart";
-import Products from "./components/products";
+import Products from "./components/Products/Products";
+import MyCart from "./components/MyCart/MyCart";
+import "./css/App.css";
 
-import "../src/css/App.css";
 function App() {
   const [products, setProducts] = useState([]);
   useEffect(() => {
@@ -14,11 +14,12 @@ function App() {
   return (
     <div className="main-container">
       <div className="content-container">
-        <div className="header">Fancy products</div>
-        <h1 className="number">(29)</h1>
+        <div className="container-title">
+          Fancy products <span className="container-list-total">(29)</span>
+        </div>
         <Products products={products} />
       </div>
-      <Mycart />
+      <MyCart />;
     </div>
   );
 }
