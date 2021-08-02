@@ -1,6 +1,5 @@
 import React from "react";
 import "./Products.css";
-
 const Products = ({ products }) => {
   return (
     <div className="products">
@@ -10,6 +9,7 @@ const Products = ({ products }) => {
           <h1 className="price">${product.price}</h1>
           <p className="title">{product.title}</p>
           <span className="category">{product.category}</span>
+          <button className="add-to-cart">Add to cart</button>
           {/*<p className="description">{product.description}</p> */}
         </div>
       ))}
