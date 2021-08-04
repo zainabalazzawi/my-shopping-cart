@@ -1,4 +1,4 @@
-import React from "react";
+import AddToCart from "../AddToCart/AddToCart";
 import "./Products.css";
 const Products = ({ products }) => {
   return (
@@ -9,7 +9,7 @@ const Products = ({ products }) => {
           <h1 className="price">${product.price}</h1>
           <p className="title">{product.title}</p>
           <span className="category">{product.category}</span>
-          <button className="add-to-cart">Add to cart</button>
+          <AddToCart product={product} />
           {/*<p className="description">{product.description}</p> */}
         </div>
       ))}

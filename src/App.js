@@ -19,7 +19,7 @@ function App() {
         </div>
         <Products products={products} />
       </div>
-      <MyCart />;
+      <MyCart />
     </div>
   );
 }

@@ -1,9 +1,20 @@
 import React from "react";
 import "./AddToCart.css";
-const AddToCart = () => {
+const AddToCart = ({ product }) => {
+  const handleAdd = (e) => {
+    console.log(e.target.value);
+  };
+
   return (
     <div>
-      <button className="add-to-cart">Add to cart</button>
+      <button
+        type="button"
+        value={product.title}
+        className="add-to-cart"
+        onClick={handleAdd}
+      >
+        Add to cart
+      </button>
     </div>
   );
 };
