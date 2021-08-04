@@ -10,7 +10,6 @@ const Products = ({ products }) => {
           <p className="title">{product.title}</p>
           <span className="category">{product.category}</span>
           <AddToCart product={product} />
-          {/*<p className="description">{product.description}</p> */}
         </div>
       ))}
     </div>

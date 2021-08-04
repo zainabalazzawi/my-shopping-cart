@@ -1,16 +1,10 @@
-import { useEffect, useState } from "react";
 import Products from "./components/Products/Products";
 import MyCart from "./components/MyCart/MyCart";
 import "./css/App.css";
+import useFetch from "./components/useFetch";
 
 function App() {
-  const [products, setProducts] = useState([]);
-  useEffect(() => {
-    fetch("https://fakestoreapi.com/products")
-      .then((res) => res.json())
-      .then((data) => setProducts(data));
-  }, []);
-
+  const { products } = useFetch("https://fakestoreapi.com/products");
   return (
     <div className="main-container">
       <div className="content-container">
@@ -19,7 +13,7 @@ function App() {
         </div>
         <Products products={products} />
       </div>
-      <MyCart />
+      <MyCart products={products} />
     </div>
   );
 }
