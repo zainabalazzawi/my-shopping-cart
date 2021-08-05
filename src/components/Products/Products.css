@@ -7,6 +7,7 @@
 }
 
 .product {
+  display: grid;
   position: relative;
   padding: 30px;
   background: var(--white);
@@ -16,7 +17,7 @@
 }
 
 .img {
-  display: flex;
+  display: grid;
   width: 146.74px;
   height: 142.48px;
   justify-self: center;

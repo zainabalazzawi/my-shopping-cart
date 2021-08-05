@@ -1,6 +1,6 @@
 import React from "react";
 import "./MyCart.css";
-const MyCart = ({ products }) => {
+const MyCart = ({ data }) => {
   return (
     <div className="my-cart-container">
       <h1 className="cart-word">My Cart</h1>
@@ -11,7 +11,7 @@ const MyCart = ({ products }) => {
         No products added yet, add items to continue.
       </p>
       {/* <div className="list-of-products">
-        {products.map((product) => (
+        {data.map((product) => (
           <div className="product" key={product.id}>
             <img className="img" src={product.image} alt={product.title} />
             <p className="title">{product.title}</p>
