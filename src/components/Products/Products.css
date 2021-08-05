@@ -16,12 +16,23 @@
   height: 294px;
 }
 
-.img {
+.image-container {
   display: grid;
   width: 146.74px;
   height: 142.48px;
   justify-self: center;
 }
+
+.with-background-image {
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.image {
+  width: 100%;
+}
+
 .price {
   display: flex;
   font-style: normal;
