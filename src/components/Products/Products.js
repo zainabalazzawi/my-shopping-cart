@@ -1,16 +1,12 @@
-import AddToCart from "../AddToCart/AddToCart";
+import React from "react";
+import Product from "../product/Product";
 import "./Products.css";
-const Products = ({ data }) => {
+const Products = ({ isLoading, data, addToCart }) => {
   return (
     <div className="products">
+      {isLoading && <div> Loading...</div>}
       {data.map((product) => (
-        <div className="product" key={product.id}>
-          <img className="img" src={product.image} alt={product.title} />
-          <h1 className="price">${product.price}</h1>
-          <p className="title">{product.title}</p>
-          <span className="category">{product.category}</span>
-          <AddToCart product={product} />
-        </div>
+        <Product product={product} key={product.id} addToCart={addToCart} />
       ))}
     </div>
   );
