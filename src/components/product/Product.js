@@ -26,4 +26,3 @@ const Product = ({ product, addToCart }) => {
 };
 
 export default Product;
-// <AddToCart />;

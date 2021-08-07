@@ -1,6 +1,6 @@
 import React from "react";
 import "./MyCart.css";
-const MyCart = ({ cart }) => {
+const MyCart = ({ cart, removeFromCart }) => {
   console.log(cart);
 
   return (
@@ -25,7 +25,9 @@ const MyCart = ({ cart }) => {
                   style={{ backgroundImage: `url(${product.image})` }}
                 ></div>
               </div>
-              <div className="count">X</div>
+              <div className="count" onClick={() => removeFromCart(product)}>
+                X
+              </div>
 
               <p className="title-cart">{product.title}</p>
               <h1 className="price-cart">${product.price}</h1>

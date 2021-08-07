@@ -14,7 +14,10 @@ function App() {
     setCart([...cart, product]);
   };
 
-  // const removeFromCart = () => {};
+  const removeFromCart = (product) => {
+    setCart(cart.filter((cartItem) => cartItem.id !== product.id));
+  };
+
   return (
     <div className="main-container">
       <div className="content-container">
@@ -23,7 +26,7 @@ function App() {
         </div>
         <Products data={data} addToCart={addToCart} isLoading={isLoading} />
       </div>
-      <MyCart cart={cart} />
+      <MyCart cart={cart} removeFromCart={removeFromCart} />
     </div>
   );
 }
