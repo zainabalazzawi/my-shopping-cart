@@ -1,13 +1,13 @@
 import React from "react";
 import "./MyCart.css";
-const MyCart = ({ cart, removeFromCart }) => {
+const MyCart = ({ cart, removeFromCart, getCartTotal, getTotalSum }) => {
   console.log(cart);
 
   return (
     <div className="my-cart-container">
       <h1 className="cart-word">My Cart</h1>
       <div className="circle">
-        <span className="amount">0</span>
+        <span className="amount">{getCartTotal()}</span>
       </div>
       {cart.length === 0 && (
         <p className="no-products">
@@ -26,7 +26,7 @@ const MyCart = ({ cart, removeFromCart }) => {
                 ></div>
               </div>
               <div className="count" onClick={() => removeFromCart(product)}>
-                X
+                X{product.quantity}
               </div>
 
               <p className="title-cart">{product.title}</p>
@@ -38,7 +38,7 @@ const MyCart = ({ cart, removeFromCart }) => {
 
       <div className="line"></div>
       <div className="total">Total</div>
-      <div className="total-price">$00.00</div>
+      <div className="total-price">${parseFloat(getTotalSum().toFixed(2))}</div>
       <button className="pay-btn">Pay</button>
     </div>
   );
