@@ -1,6 +1,6 @@
 import React from "react";
 import "./MyCart.css";
-const MyCart = ({ cart, removeFromCart, getCartTotal, getTotalSum }) => {
+const MyCart = ({ cart, getCartTotal, getTotalSum, removeFromCart }) => {
   console.log(cart);
 
   return (
@@ -18,16 +18,17 @@ const MyCart = ({ cart, removeFromCart, getCartTotal, getTotalSum }) => {
         <div className="list-of-products">
           {cart.map((product) => (
             <div className="product-cart" key={product.id}>
-              <div className="image-container-cart">
+              <div
+                className="image-container-cart"
+                onClick={() => removeFromCart(product)}
+              >
                 <div
                   className="with-background-image-cart"
                   title={product.title}
                   style={{ backgroundImage: `url(${product.image})` }}
                 ></div>
               </div>
-              <div className="count" onClick={() => removeFromCart(product)}>
-                X{product.quantity}
-              </div>
+              <div className="count">X{product.quantity}</div>
 
               <p className="title-cart">{product.title}</p>
               <h1 className="price-cart">${product.price}</h1>
