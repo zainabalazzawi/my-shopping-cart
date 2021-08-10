@@ -2,9 +2,10 @@ import { useState } from "react";
 
 const useMyCart = () => {
   const [cart, setCart] = useState([]);
+  // const [total, setTotal] = useState(0);
 
+  //addToCart
   const addToCart = (product) => {
-    // if (cart.find((cartItem) => cartItem.id === product.id)) return;
     let itemInCart = cart.find((cartItem) => cartItem.id === product.id);
     const newCart = [...cart];
     if (itemInCart) {
@@ -16,15 +17,30 @@ const useMyCart = () => {
       };
       newCart.push(itemInCart);
     }
-
-    // setCart([...cart, product]);
     setCart(newCart);
   };
 
+  //removeFromCart
   const removeFromCart = (product) => {
-    setCart(cart.filter((cartItem) => cartItem.id !== product.id));
+    let itemInCart = cart.find((cartItem) => cartItem.id === product.id);
+    let newCart = [...cart];
+    if (itemInCart.quantity > 1) {
+      itemInCart.quantity--;
+    } else if (itemInCart.quantity === 1) {
+      newCart = cart.filter((cartItem) => cartItem.id !== product.id);
+    }
+    setCart(newCart);
   };
-  return { addToCart, removeFromCart, cart };
+
+  //getTotalPrice
+  const getCartTotal = () => {
+    return cart.reduce((sum, { quantity }) => sum + quantity, 0);
+  };
+  const getTotalSum = () => {
+    return cart.reduce((sum, { price, quantity }) => sum + price * quantity, 0);
+  };
+
+  return { cart, addToCart, removeFromCart, getCartTotal, getTotalSum };
 };
 
 export default useMyCart;

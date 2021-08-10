@@ -1,6 +1,6 @@
 import React from "react";
 import "./MyCart.css";
-const MyCart = ({ cart, getCartTotal, getTotalSum, removeFromCart }) => {
+const MyCart = ({ cart, removeFromCart, getTotalSum, getCartTotal }) => {
   console.log(cart);
 
   return (
@@ -22,6 +22,7 @@ const MyCart = ({ cart, getCartTotal, getTotalSum, removeFromCart }) => {
                 className="image-container-cart"
                 onClick={() => removeFromCart(product)}
               >
+                <div className="remove-label">remove</div>
                 <div
                   className="with-background-image-cart"
                   title={product.title}
