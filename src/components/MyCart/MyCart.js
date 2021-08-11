@@ -1,13 +1,13 @@
 import React from "react";
 import "./MyCart.css";
-const MyCart = ({ cart, removeFromCart, getTotalSum, getCartTotal }) => {
+const MyCart = ({ cart, removeFromCart, totalSum, cartTotal }) => {
   console.log(cart);
 
   return (
     <div className="my-cart-container">
       <h1 className="cart-word">My Cart</h1>
       <div className="circle">
-        <span className="amount">{getCartTotal()}</span>
+        <span className="amount">{cartTotal}</span>
       </div>
       {cart.length === 0 && (
         <p className="no-products">
@@ -40,7 +40,7 @@ const MyCart = ({ cart, removeFromCart, getTotalSum, getCartTotal }) => {
 
       <div className="line"></div>
       <div className="total">Total</div>
-      <div className="total-price">${parseFloat(getTotalSum().toFixed(2))}</div>
+      <div className="total-price">${parseFloat(totalSum.toFixed(2))}</div>
       <button className="pay-btn">Pay</button>
     </div>
   );

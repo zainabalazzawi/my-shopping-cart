@@ -6,8 +6,7 @@ import useFetch from "./components/Hooks/useFetch";
 
 function App() {
   const { data, isLoading } = useFetch("https://fakestoreapi.com/products");
-  const { cart, addToCart, removeFromCart, getCartTotal, getTotalSum } =
-    useMyCart();
+  const { cart, addToCart, removeFromCart, cartTotal, totalSum } = useMyCart();
 
   return (
     <div className="main-container">
@@ -21,8 +20,8 @@ function App() {
       <MyCart
         cart={cart}
         removeFromCart={removeFromCart}
-        getCartTotal={getCartTotal}
-        getTotalSum={getTotalSum}
+        totalSum={totalSum}
+        cartTotal={cartTotal}
       />
     </div>
   );

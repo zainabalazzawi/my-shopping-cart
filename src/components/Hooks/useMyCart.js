@@ -1,8 +1,9 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 const useMyCart = () => {
   const [cart, setCart] = useState([]);
-  // const [total, setTotal] = useState(0);
+  const [totalSum, setTotalSum] = useState(0);
+  const [cartTotal, setCartTotal] = useState(0);
 
   //addToCart
   const addToCart = (product) => {
@@ -33,14 +34,15 @@ const useMyCart = () => {
   };
 
   //getTotalPrice
-  const getCartTotal = () => {
-    return cart.reduce((sum, { quantity }) => sum + quantity, 0);
-  };
-  const getTotalSum = () => {
-    return cart.reduce((sum, { price, quantity }) => sum + price * quantity, 0);
-  };
 
-  return { cart, addToCart, removeFromCart, getCartTotal, getTotalSum };
+  useEffect(() => {
+    setCartTotal(cart.reduce((sum, { quantity }) => sum + quantity, 0));
+    setTotalSum(
+      cart.reduce((sum, { price, quantity }) => sum + price * quantity, 0)
+    );
+  }, [cart]);
+
+  return { cart, addToCart, removeFromCart, cartTotal, totalSum };
 };
 
 export default useMyCart;
