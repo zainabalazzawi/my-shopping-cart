@@ -42,7 +42,21 @@ const useMyCart = () => {
     );
   }, [cart]);
 
-  return { cart, addToCart, removeFromCart, cartTotal, totalSum };
+  const submitPay = () => {
+    setTimeout(() => {
+      setCart([]);
+      console.log("cleared");
+    }, 5000);
+  };
+
+  return {
+    cart,
+    addToCart,
+    removeFromCart,
+    cartTotal,
+    totalSum,
+    submitPay,
+  };
 };
 
 export default useMyCart;

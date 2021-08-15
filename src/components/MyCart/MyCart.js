@@ -1,6 +1,6 @@
 import React from "react";
 import "./MyCart.css";
-const MyCart = ({ cart, removeFromCart, totalSum, cartTotal }) => {
+const MyCart = ({ cart, removeFromCart, totalSum, cartTotal, submitPay }) => {
   console.log(cart);
 
   return (
@@ -41,7 +41,17 @@ const MyCart = ({ cart, removeFromCart, totalSum, cartTotal }) => {
       <div className="line"></div>
       <div className="total">Total</div>
       <div className="total-price">${parseFloat(totalSum.toFixed(2))}</div>
-      <button className="pay-btn">Pay</button>
+
+      {cart.length === 0 && <button className="pay-btn">Pay</button>}
+      {cart.length > 0 && (
+        <button
+          className="pay-btn"
+          onClick={submitPay}
+          style={{ background: "#fabc41" }}
+        >
+          Pay
+        </button>
+      )}
     </div>
   );
 };
