@@ -42,6 +42,8 @@ const useMyCart = () => {
     );
   }, [cart]);
 
+  // submitPay
+
   const submitPay = () => {
     setTimeout(() => {
       setCart([]);

@@ -1,8 +1,8 @@
-import Products from "./components/Products/Products";
-import MyCart from "./components/MyCart/MyCart";
 import "./css/App.css";
 import useMyCart from "./components/Hooks/useMyCart";
 import useFetch from "./components/Hooks/useFetch";
+import Products from "./components/Products/Products";
+import MyCart from "./components/MyCart/MyCart";
 
 function App() {
   const { data, isLoading } = useFetch("https://fakestoreapi.com/products");
@@ -12,11 +12,14 @@ function App() {
   return (
     <div className="main-container">
       <div className="content-container">
-        <div className="container-title">
-          Fancy products{" "}
-          <span className="container-list-total">{data.length}</span>
-        </div>
-        <Products data={data} addToCart={addToCart} isLoading={isLoading} />
+        {isLoading && <div className="Loading"> Loading...</div>}
+        {!isLoading && (
+          <div className="container-title">
+            Fancy products{" "}
+            <span className="container-list-total">{data.length}</span>
+          </div>
+        )}
+        <Products data={data} addToCart={addToCart} />
       </div>
       <MyCart
         cart={cart}
@@ -24,6 +27,7 @@ function App() {
         totalSum={totalSum}
         cartTotal={cartTotal}
         submitPay={submitPay}
+        isLoading={isLoading}
       />
     </div>
   );

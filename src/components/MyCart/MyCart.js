@@ -1,6 +1,14 @@
 import React from "react";
+import Pay from "../Pay/Pay";
 import "./MyCart.css";
-const MyCart = ({ cart, removeFromCart, totalSum, cartTotal, submitPay }) => {
+const MyCart = ({
+  cart,
+  removeFromCart,
+  totalSum,
+  cartTotal,
+  submitPay,
+  isLoading,
+}) => {
   console.log(cart);
 
   return (
@@ -22,6 +30,7 @@ const MyCart = ({ cart, removeFromCart, totalSum, cartTotal, submitPay }) => {
                 className="image-container-cart"
                 onClick={() => removeFromCart(product)}
               >
+                {" "}
                 <div className="remove-label">remove</div>
                 <div
                   className="with-background-image-cart"
@@ -41,17 +50,7 @@ const MyCart = ({ cart, removeFromCart, totalSum, cartTotal, submitPay }) => {
       <div className="line"></div>
       <div className="total">Total</div>
       <div className="total-price">${parseFloat(totalSum.toFixed(2))}</div>
-
-      {cart.length === 0 && <button className="pay-btn">Pay</button>}
-      {cart.length > 0 && (
-        <button
-          className="pay-btn"
-          onClick={submitPay}
-          style={{ background: "#fabc41" }}
-        >
-          Pay
-        </button>
-      )}
+      <Pay cart={cart} submitPay={submitPay} isLoading={isLoading} />
     </div>
   );
 };
