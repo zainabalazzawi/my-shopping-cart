@@ -3,6 +3,7 @@ import useMyCart from "./components/Hooks/useMyCart";
 import useFetch from "./components/Hooks/useFetch";
 import Products from "./components/Products/Products";
 import MyCart from "./components/MyCart/MyCart";
+import Loading from "./components/Loading/Loading";
 
 function App() {
   const { data, isLoading } = useFetch("https://fakestoreapi.com/products");
@@ -12,7 +13,7 @@ function App() {
   return (
     <div className="main-container">
       <div className="content-container">
-        {isLoading && <div className="Loading"> Loading...</div>}
+        {isLoading && <Loading />}
         {!isLoading && (
           <div className="container-title">
             Fancy products{" "}
