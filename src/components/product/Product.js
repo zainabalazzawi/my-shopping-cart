@@ -1,5 +1,6 @@
 import React from "react";
-import "../Products/Products.css";
+import "./Product.css";
+
 const Product = ({ product, addToCart }) => {
   return (
     <div className="product">

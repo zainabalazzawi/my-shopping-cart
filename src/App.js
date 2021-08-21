@@ -7,8 +7,15 @@ import Loading from "./components/Loading/Loading";
 
 function App() {
   const { data, isLoading } = useFetch("https://fakestoreapi.com/products");
-  const { cart, addToCart, removeFromCart, cartTotal, totalSum, submitPay } =
-    useMyCart();
+  const {
+    cart,
+    addToCart,
+    removeFromCart,
+    cartTotal,
+    totalSum,
+    submitPay,
+    isPay,
+  } = useMyCart();
 
   return (
     <div className="main-container">
@@ -28,7 +35,7 @@ function App() {
         totalSum={totalSum}
         cartTotal={cartTotal}
         submitPay={submitPay}
-        isLoading={isLoading}
+        isPay={isPay}
       />
     </div>
   );

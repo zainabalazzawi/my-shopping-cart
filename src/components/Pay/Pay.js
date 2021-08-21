@@ -1,17 +1,15 @@
 import React from "react";
-
-const Pay = ({ submitPay, cart, isLoading }) => {
+import "./Pay.css";
+const Pay = ({ submitPay, cart, isPay }) => {
   return (
     <div>
-      {cart.length ? (
-        <button className="pay-btn" onClick={submitPay}>
-          Pay
-        </button>
-      ) : (
-        <button className="pay-btn" disabled>
-          Pay
-        </button>
-      )}
+      <button
+        className="pay-btn"
+        onClick={submitPay}
+        disabled={cart.length === 0 || !isPay}
+      >
+        {isPay ? "pay" : "paying..."}
+      </button>
     </div>
   );
 };

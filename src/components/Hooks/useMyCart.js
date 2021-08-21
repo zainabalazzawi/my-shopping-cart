@@ -4,6 +4,7 @@ const useMyCart = () => {
   const [cart, setCart] = useState([]);
   const [totalSum, setTotalSum] = useState(0);
   const [cartTotal, setCartTotal] = useState(0);
+  const [isPay, setIsPay] = useState(true);
 
   //addToCart
   const addToCart = (product) => {
@@ -46,9 +47,11 @@ const useMyCart = () => {
 
   const submitPay = () => {
     setTimeout(() => {
+      setIsPay(true);
       setCart([]);
       console.log("cleared");
     }, 5000);
+    setIsPay(false);
   };
 
   return {
@@ -58,6 +61,7 @@ const useMyCart = () => {
     cartTotal,
     totalSum,
     submitPay,
+    isPay,
   };
 };
 

@@ -7,7 +7,7 @@ const MyCart = ({
   totalSum,
   cartTotal,
   submitPay,
-  isLoading,
+  isPay,
 }) => {
   console.log(cart);
 
@@ -50,7 +50,7 @@ const MyCart = ({
       <div className="line"></div>
       <div className="total">Total</div>
       <div className="total-price">${parseFloat(totalSum.toFixed(2))}</div>
-      <Pay cart={cart} submitPay={submitPay} isLoading={isLoading} />
+      <Pay cart={cart} submitPay={submitPay} isPay={isPay} />
     </div>
   );
 };
