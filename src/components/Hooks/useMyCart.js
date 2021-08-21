@@ -1,11 +1,10 @@
 import { useEffect, useState } from "react";
 
 const useMyCart = () => {
-  // state
   const [cart, setCart] = useState([]);
   const [totalSum, setTotalSum] = useState(0);
   const [cartTotal, setCartTotal] = useState(0);
-  const [isPay, setIsPay] = useState(true);
+  const [isPaying, setIsPaying] = useState(true);
 
   //addToCart
   const addToCart = (product) => {
@@ -48,11 +47,11 @@ const useMyCart = () => {
 
   const submitPay = () => {
     setTimeout(() => {
-      setIsPay(true);
+      setIsPaying(true);
       setCart([]);
       console.log("cleared");
     }, 5000);
-    setIsPay(false);
+    setIsPaying(false);
   };
 
   return {
@@ -62,7 +61,7 @@ const useMyCart = () => {
     cartTotal,
     totalSum,
     submitPay,
-    isPay,
+    isPaying,
   };
 };
 

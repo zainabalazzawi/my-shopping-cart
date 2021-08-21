@@ -1,14 +1,14 @@
 import React from "react";
 import "./Pay.css";
-const Pay = ({ submitPay, cart, isPay }) => {
+const Pay = ({ submitPay, cart, isPaying }) => {
   return (
     <div>
       <button
         className="pay-btn"
         onClick={submitPay}
-        disabled={cart.length === 0 || !isPay}
+        disabled={cart.length === 0 || !isPaying}
       >
-        {isPay ? "pay" : "paying..."}
+        {isPaying ? "pay" : "paying..."}
       </button>
     </div>
   );

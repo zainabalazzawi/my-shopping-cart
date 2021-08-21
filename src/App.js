@@ -14,7 +14,7 @@ function App() {
     cartTotal,
     totalSum,
     submitPay,
-    isPay,
+    isPaying,
   } = useMyCart();
 
   return (
@@ -35,7 +35,7 @@ function App() {
         totalSum={totalSum}
         cartTotal={cartTotal}
         submitPay={submitPay}
-        isPay={isPay}
+        isPaying={isPaying}
       />
     </div>
   );
