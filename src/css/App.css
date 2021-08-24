@@ -33,3 +33,31 @@
 .container-list-total {
   opacity: 0.3;
 }
+.circle-mobile {
+  display: none;
+}
+@media (max-width: 768px) {
+  .main-container {
+    display: grid;
+    grid-template-columns: auto;
+    padding: 15px;
+  }
+
+  .content-container {
+    display: grid;
+    padding: none;
+    /* display: none; */
+  }
+
+  .circle-mobile {
+    position: fixed;
+    left: 310px;
+    top: 740px;
+    background: var(--accent);
+    display: grid;
+    width: 40px;
+    height: 40px;
+    place-content: center;
+    border-radius: 50px;
+  }
+}

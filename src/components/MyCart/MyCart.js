@@ -1,4 +1,5 @@
 import React from "react";
+import BackToStore from "../BackToStore/BackToStore";
 import Pay from "../Pay/Pay";
 import "./MyCart.css";
 const MyCart = ({
@@ -51,6 +52,7 @@ const MyCart = ({
       <div className="total">Total</div>
       <div className="total-price">${parseFloat(totalSum.toFixed(2))}</div>
       <Pay cart={cart} submitPay={submitPay} isPaying={isPaying} />
+      <BackToStore />
     </div>
   );
 };

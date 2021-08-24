@@ -8,6 +8,23 @@
   overflow-y: auto;
 }
 
+@media (max-width: 768px) {
+  .my-cart-container {
+    display: none;
+  }
+  .circle {
+    position: fixed;
+    left: 310px;
+    top: 740px;
+    background: var(--accent);
+    display: grid;
+    width: 40px;
+    height: 40px;
+    place-content: center;
+    border-radius: 50px;
+  }
+}
+
 .cart-word {
   display: flex;
   color: var(--white);

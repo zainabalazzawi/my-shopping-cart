@@ -1,7 +1,7 @@
 import React from "react";
-import "./Product.css";
+import "./ProductItem.css";
 
-const Product = ({ product, addToCart }) => {
+const ProductItem = ({ product, addToCart }) => {
   return (
     <div className="product">
       <div key={product.id}>
@@ -26,4 +26,4 @@ const Product = ({ product, addToCart }) => {
   );
 };
 
-export default Product;
+export default ProductItem;
