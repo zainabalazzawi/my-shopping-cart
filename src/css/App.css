@@ -33,9 +33,27 @@
 .container-list-total {
   opacity: 0.3;
 }
-.circle-mobile {
-  display: none;
+
+.circle {
+  background: var(--accent);
+  display: grid;
+  position: absolute;
+  right: 11.5%;
+  top: 18%;
+  width: 2px;
+  height: 40px;
+  place-content: center;
+  border-radius: 50px;
 }
+
+.amount {
+  font-style: normal;
+  font-weight: bold;
+  font-size: 21px;
+  line-height: 25px;
+  text-align: center;
+}
+
 @media (max-width: 768px) {
   .main-container {
     display: grid;
@@ -45,16 +63,13 @@
 
   .content-container {
     display: grid;
-    padding: none;
-    /* display: none; */
   }
 
-  .circle-mobile {
-    position: fixed;
-    left: 310px;
-    top: 740px;
+  .circle {
     background: var(--accent);
-    display: grid;
+    position: fixed;
+    right: 7%;
+    top: 91%;
     width: 40px;
     height: 40px;
     place-content: center;

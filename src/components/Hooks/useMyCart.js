@@ -5,6 +5,7 @@ const useMyCart = () => {
   const [totalSum, setTotalSum] = useState(0);
   const [cartTotal, setCartTotal] = useState(0);
   const [isPaying, setIsPaying] = useState(true);
+  const [showCart, setShowCart] = useState(false);
 
   //addToCart
   const addToCart = (product) => {
@@ -54,6 +55,11 @@ const useMyCart = () => {
     setIsPaying(false);
   };
 
+  //ShowCart
+  useEffect(() => {
+    setShowCart(false);
+  }, []);
+
   return {
     cart,
     addToCart,
@@ -62,6 +68,8 @@ const useMyCart = () => {
     totalSum,
     submitPay,
     isPaying,
+    showCart,
+    setShowCart,
   };
 };
 

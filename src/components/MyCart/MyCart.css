@@ -10,21 +10,9 @@
 
 @media (max-width: 768px) {
   .my-cart-container {
-    display: none;
-  }
-  .circle {
-    position: fixed;
-    left: 310px;
-    top: 740px;
-    background: var(--accent);
     display: grid;
-    width: 40px;
-    height: 40px;
-    place-content: center;
-    border-radius: 50px;
   }
 }
-
 .cart-word {
   display: flex;
   color: var(--white);
@@ -33,22 +21,6 @@
   font-size: 21px;
   line-height: 25px;
   padding-bottom: 15px;
-}
-.circle {
-  background: var(--accent);
-  display: grid;
-  width: 40px;
-  height: 40px;
-  place-content: center;
-  border-radius: 50px;
-}
-
-.amount {
-  font-style: normal;
-  font-weight: bold;
-  font-size: 21px;
-  line-height: 25px;
-  text-align: center;
 }
 
 .no-products {

@@ -2,22 +2,12 @@ import React from "react";
 import BackToStore from "../BackToStore/BackToStore";
 import Pay from "../Pay/Pay";
 import "./MyCart.css";
-const MyCart = ({
-  cart,
-  removeFromCart,
-  totalSum,
-  cartTotal,
-  submitPay,
-  isPaying,
-}) => {
+const MyCart = ({ cart, removeFromCart, totalSum, submitPay, isPaying }) => {
   console.log(cart);
 
   return (
     <div className="my-cart-container">
       <h1 className="cart-word">My Cart</h1>
-      <div className="circle">
-        <span className="amount">{cartTotal}</span>
-      </div>
       {cart.length === 0 && (
         <p className="no-products">
           No products added yet, add items to continue.
