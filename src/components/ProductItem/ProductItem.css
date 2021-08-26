@@ -7,7 +7,11 @@
   border-radius: 15px;
   height: 294px;
 }
-
+@media (max-width: 768px) {
+  .product {
+    height: 94%;
+  }
+}
 .add-to-cart {
   position: absolute;
   background: var(--accent);
