@@ -10,9 +10,13 @@
 
 @media (max-width: 768px) {
   .my-cart-container {
+    display: none;
+  }
+  .my-cart-container.active {
     display: grid;
   }
 }
+
 .cart-word {
   display: flex;
   color: var(--white);

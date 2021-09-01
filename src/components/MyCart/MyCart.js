@@ -2,11 +2,11 @@ import React from "react";
 import BackToStore from "../BackToStore/BackToStore";
 import Pay from "../Pay/Pay";
 import "./MyCart.css";
-const MyCart = ({ cart, removeFromCart, totalSum, submitPay, isPaying }) => {
+const MyCart = ({ cart, removeFromCart, totalSum, submitPay, isPaying, setShowCart, showCart }) => {
   console.log(cart);
 
   return (
-    <div className="my-cart-container">
+    <div className={`my-cart-container ${showCart ? 'active' : ''}`}  >
       <h1 className="cart-word">My Cart</h1>
       {cart.length === 0 && (
         <p className="no-products">
@@ -42,7 +42,7 @@ const MyCart = ({ cart, removeFromCart, totalSum, submitPay, isPaying }) => {
       <div className="total">Total</div>
       <div className="total-price">${parseFloat(totalSum.toFixed(2))}</div>
       <Pay cart={cart} submitPay={submitPay} isPaying={isPaying} />
-      <BackToStore />
+      <BackToStore setShowCart={setShowCart} />
     </div>
   );
 };
