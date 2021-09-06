@@ -5,6 +5,7 @@ import useFetch from "./components/Hooks/useFetch";
 import MyCart from "./components/MyCart/MyCart";
 import Loading from "./components/Loading/Loading";
 import Products from "./components/Products/Products";
+import { Fragment } from "react";
 
 function App() {
   const { data, isLoading } = useFetch("https://fakestoreapi.com/products");
@@ -25,12 +26,14 @@ function App() {
       <div className={`content-container ${showCart ? "cart-active" : ""}`}>
         {isLoading && <Loading />}
         {!isLoading && (
-          <div className="container-title">
-            Fancy products{" "}
-            <span className="container-list-total">{data.length}</span>
-          </div>
+          <Fragment>
+            <div className="container-title">
+              Fancy products{" "}
+              <span className="container-list-total">{data.length}</span>
+            </div>
+            <Products data={data} addToCart={addToCart} />
+          </Fragment>
         )}
-        <Products data={data} addToCart={addToCart} />
       </div>
       <MyCart
         cart={cart}

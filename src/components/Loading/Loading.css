@@ -1,13 +1,10 @@
 .Loading {
-  position: absolute;
-  width: 140px;
-  height: 35px;
-  left: 499px;
-  top: 432px;
+  display: grid;
+  color: var(--primary);
   font-style: normal;
   font-weight: 500;
   font-size: 30px;
   line-height: 35px;
   align-items: center;
-  color: var(--primary);
+  place-content: center;
 }
